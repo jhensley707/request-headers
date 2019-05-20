@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block title %}
+Home
+{% endblock %}
+{% block content %}
+<h1>Header Viewer</h1>
+<p>These are the HTTP request headers received by the Flask web server.</p>
+<table>
+    <tr>
+        <th>Header Key</th>
+        <th>Header Value</th>
+    </tr>
+    {% for key in data.keys() %}
+    <tr>
+        <td>{{key}}</td>
+        <td>{{data[key]}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
